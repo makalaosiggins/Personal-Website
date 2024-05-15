@@ -1,10 +1,14 @@
-const javascriptHeading = document.createElement("h2");
-javascriptHeading.textContent = "This heading is dynamically added by JavaScript.";
+// Add a fun animation to the header
+const header = document.querySelector('header');
+header.addEventListener('mouseover', function() {
+    header.style.transform = 'rotate(5deg)';
+});
 
-const earthHeading = document.createElement("h2");
-earthHeading.textContent = "The water on Planet Earth is typically this shade of blue.";
-earthHeading.classList.add("smaller"); // Add the "smaller" class to the second heading
+header.addEventListener('mouseout', function() {
+    header.style.transform = 'rotate(0deg)';
+});
 
-const body = document.querySelector("body");
-body.appendChild(javascriptHeading);
-body.appendChild(earthHeading);
+// Add a fun message when clicking on the header
+header.addEventListener('click', function() {
+    alert('Welcome to my personal website! Enjoy your stay!');
+});
